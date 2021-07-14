@@ -47,14 +47,17 @@
   }
  
  - 접근
+ 
   example.key
   example['key']
     
  - 추가
+ 
   example.more = "extra"
   example['more'] = "extra"
     
  - 삭제
+ 
   delete example.key  
 
 - This
