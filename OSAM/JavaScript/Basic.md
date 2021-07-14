@@ -29,11 +29,11 @@
 
 ## 형변환
 
--String() : 문자형으로 변환
+- String() : 문자형으로 변환
 
--Number() : 숫자형으로 변환
+- Number() : 숫자형으로 변환
 
--Boolean() : 불린형으로 변환
+- Boolean() : 불린형으로 변환
 
 ## 객체
 
@@ -46,15 +46,15 @@
     }
   }
  
- -접근
+ - 접근
   example.key
   example['key']
     
- -추가
+ - 추가
   example.more = "extra"
   example['more'] = "extra"
     
- -삭제
+ - 삭제
   delete example.key  
 
 - This
