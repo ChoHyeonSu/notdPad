@@ -49,5 +49,13 @@
 - trim() : 앞 뒤 공백 제거
 - repeat(n) : n번 반복
 - codePointAt(0) : 아스키값 획득 / fromCodePoint
--  
+
+
+## Array Methods
+- splice(n,m) : n번째 index부터 m개만큼 제거 / return 값은 제거한 값
+- slice(n,m) : n부터 m까지 반환
+- concat([arr]) : arr 병합
+- indexOf(n) : n을 찾을때까지 탐색하고 그 index를 반환
+- reverse : 역순으로 재배열
+- map(fn) : 함수를 받아 실행하고 새로운 배열을 반환  
 
