@@ -58,4 +58,6 @@
 - indexOf(n) : n을 찾을때까지 탐색하고 그 index를 반환
 - reverse : 역순으로 재배열
 - map(fn) : 함수를 받아 실행하고 새로운 배열을 반환  
+- sort(fn) : 배열을 정렬   *_.sortBy(arr); 로 간단하게 처리하기도 함, Lodash 라는 Library 사용
+- reduce(fn) : 인수를 함수로 받음 / (누적 계산값, 현재값) => { return 계산값 }
 
