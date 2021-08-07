@@ -61,3 +61,16 @@
 - sort(fn) : 배열을 정렬   *_.sortBy(arr); 로 간단하게 처리하기도 함, Lodash 라는 Library 사용
 - reduce(fn) : 인수를 함수로 받음 / (누적 계산값, 현재값) => { return 계산값 }
 
+## Destructurting assignment 배열 & 객체 구조 분해 
+- 구조 분해 할당 구문은 배열이나 객체의 속성을 분해해서 그 값을 변수에 담을 수 있게 하는표현식
+- 바꿔치기 구현 가능 : [a,b] = [b,a]
+
+
+## Rest parameters, Spread syntax 나머지 매개변수, 전개 구문
+- 
+
+
+
+
+
+
