@@ -34,7 +34,7 @@
 - Math.ceil() : 올림
 - Math.floor() : 내림
 - Math.round() : 반올림
-- Math.random() : 0~1 사이의 난수 생성 / Math.floor(Math.random() * 100) + 1 : 1~100 사이의 임의의 숫자 생성
+- Math.random() : 0~1 사이의 난수 생성 *Math.floor(Math.random() * 100) + 1 : 1~100 사이의 임의의 숫자 생성
 - Math.max() / min() : 최대값, 최소값
 - Math.abs() : 절대값
 - Math.pow() : 제곱
@@ -58,7 +58,7 @@
 - indexOf(n) : n을 찾을때까지 탐색하고 그 index를 반환
 - reverse : 역순으로 재배열
 - map(fn) : 함수를 받아 실행하고 새로운 배열을 반환  
-- sort(fn) : 배열을 정렬   *_.sortBy(arr); 로 간단하게 처리하기도 함, Lodash 라는 Library 사용
+- sort(fn) : 배열을 정렬   * _.sortBy(arr); 로 간단하게 처리하기도 함, Lodash 라는 Library 사용
 - reduce(fn) : 인수를 함수로 받음 / (누적 계산값, 현재값) => { return 계산값 }
 
 ## Destructurting assignment 배열 & 객체 구조 분해 
@@ -66,8 +66,40 @@
 - 바꿔치기 구현 가능 : [a,b] = [b,a]
 
 
-## Rest parameters, Spread syntax 나머지 매개변수, 전개 구문
-- 
+## Rest parameters 나머지 매개변수
+- 배열의 인수를 받을 때 argument를 사용하지 않으면서 array method 사용 가능
+- 항상 마지막에 위치 해야 한다.
+
+## Spread syntax 전개 구문
+- 배열 또는 객체를 병합할 때 편리함 !!
+/*  
+  let arr1 = [1,2,3];
+  let arr2 = [4,5,6];
+  let result = [...arr1, ...arr2];
+  *result : [1,2,3,4,5,6];
+*/
+
+
+## Closure
+- 함수가 생성될 당시의 외부 변수를 기억하여 생성 이후에도 계속 접근 가능한 것
+
+## setTimeout
+- 일정 시간이 지난 후 함수를 실행
+- setTimeout(fn,time,argument);
+
+## setInterval
+- 일정 시간 간격으로 함수를 반복
+- setInterval(fn,time,argument);
+
+## 유용한 Methods
+- call : 모든 함수에서 사용할 수 있으며, this를 특정값으로 지정 가능
+- function.call(this로 지정할 값, 원래 function의 인자들)
+- apply : call과 기능은 같지만, 함수의 매개변수를 배열로 받음
+- bind : 함수의 this 값을 영구히 바꿈 (리턴값을 함수로 받아서 그 함수가 특정 this값만 받게 함)
+
+
+
+
 
 
 
