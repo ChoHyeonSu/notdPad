@@ -97,6 +97,20 @@
 - apply : call과 기능은 같지만, 함수의 매개변수를 배열로 받음
 - bind : 함수의 this 값을 영구히 바꿈 (리턴값을 함수로 받아서 그 함수가 특정 this값만 받게 함)
 
+## Prototype 상속
+- Object.__proto__ 를 통해 상속
+- hasOwnProperty 를 통해 해당 프로포티가 있는지 확인
+
+## Class
+
+
+
+
+
+
+
+
+
 
 
 
