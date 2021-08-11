@@ -102,6 +102,31 @@
 - hasOwnProperty 를 통해 해당 프로포티가 있는지 확인
 
 ## Class
+- 내부에 constructor
+- 선언할 때 항상 new가 필요
+# Extend
+- 상속할 땐 extends 라는 키워드 필요
+- overriding : super.method로 부모의 method를 사용
+- 자식클래스에서 생성자를 선언하고 싶다면 항상 super()를 통해 부모의 생성자를 호출한 뒤에 해야함
+- 생성자 호출 했으면 부모인자는 this로 받아주어야함
+
+## Promise
+- const x = new Promise( (resolve, reject) => {} );
+- resolve는 성공했을 때 / reject는 실패했을 때
+- 실행되는 함수를 callback 함수라고 함
+- callback 끼리 연결되는 걸 Promises chaining 이라 함
+- Promise.all : 배열을 인자로 받고 모든작업이 완료될 때까지 대기
+- Promise.race : 배열을 인자로 받고 작업이 하나라도 완료되면 끝
+- async 를 함수에 붙여주면 Promise를 반환함
+- await는 async함수 내부 안에서 사용 가능, Promise에 붙여주면 1초 기다렸다 해줌
+
+## Generator
+- 함수의 실행을 중간에 멈췄다가 재개할 수 있는 기능
+- function* 를 통해 선언한다
+- iterable하며 iterator이다.
+- yield를 통해 영역을 구분하고 next를 통해 실행시킨다.
+- next는 vaule와 done상태를 가지며 value는 yield의 값, done은 true와 false로 구분
+
 
 
 
