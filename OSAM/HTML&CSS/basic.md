@@ -1,6 +1,6 @@
-## Visual Code
+# Visual Code
 
-# Extension
+## Extension
 
 1. Material Theme - 배경화면 색 변경
 2. Material icon Theme - 아이콘 변경
