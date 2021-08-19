@@ -29,8 +29,7 @@
 - v-for
 - props는 외부에서 받는 것, data는 내부에서 처리하는 것
 
-
-
+## Vue vs Jquery
 
 
 
