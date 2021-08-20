@@ -1,0 +1,33 @@
+- 지역 컴포넌트
+      - 선언한 영역(부모)에서만 사용 가능
+      - 부모 컴포넌트에 등록
+      - 문법 :
+            // 부모 컴포넌트
+           export default {
+                 components: {
+                       "tag-name":컴포넌트,
+                       "tagName": 컴포넌트
+                       컴포넌트   // => :"컴포넌트":컴포넌트
+                 }
+           }
+
+           // 사용
+                  <tag-name> </tag-name>
+                  <TagName></TagName>
+
+
+      - 예)
+            export default {
+                  components: {
+                        ListHeader,
+                        ListFooter
+                  }
+            }
+
+지역 컴포넌트 연습
+      - ListPage 컴포넌트 만들기
+      - ListHeader 컴포넌트 만들기
+            - ListPage에서 ListHeader 사용하기
+      - ListFooter 컴포넌트 만들기
+            - ListPage에서 ListFooter 사용하기 
+      - ListPage 컴포넌트를 App에서 사용하기

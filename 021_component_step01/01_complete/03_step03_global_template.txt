@@ -1,0 +1,14 @@
+- 전역 컴포넌트
+      - 전역에서 사용 가능
+      - 주로 main.js에서 등록
+      - 문법 :
+            Vue.Component(tagName, options)
+            - 예)
+                  Vue.Component("ListPage", ListPageComponent)
+
+
+      -주의 :
+            template 속성이 동작하기 위해서는
+            runtimeCompiler:true 이어야 함.
+            단, 이 옵션을 사용하는 경우 10kb 정도 크기가 증가함.
+            기본 옵션은 false

@@ -1,0 +1,17 @@
+- 전역 컴포넌트
+      - 전역에서 사용 가능
+      - 주로 main.js에서 등록
+      - 문법 :
+            Vue.Component(tagName, options)
+            - 예)
+                  Vue.Component("ListPage", ListPageComponent)
+
+전역 컴포넌트 연습
+      - ListPage 컴포넌트 만들기
+      - ListHeader 컴포넌트 만들기
+            - ListPage에서 ListHeader 사용하기
+      - ListFooter 컴포넌트 만들기
+            - ListPage에서 ListFooter 사용하기 
+      - ListPage 컴포넌트를  전역 컴포넌트로 등록하기 
+            
+      - ListPage 컴포넌트를 App에서 사용하기

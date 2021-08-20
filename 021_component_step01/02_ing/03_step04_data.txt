@@ -1,0 +1,12 @@
+data 영역  
+      - ListPage 컴포넌트에서 data 영역의 list 속성 출력하기
+      - 주의 :
+            반드시 아래와 같은 구조여야 함.
+
+            export default {
+                  data(){
+                        return {
+
+                        }
+                  }
+            }

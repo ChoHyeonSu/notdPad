@@ -1,0 +1,144 @@
+Vue App 핵심 파일 
+      - main.js
+            - 메인 Vue 객체 생성
+            - Store, Router 연결 
+            - 플러그인 사용 
+            - 전역 컴포넌트 등록
+
+      - App.vue
+            - 어플리케이션 메인 페이지
+            - 시작 페이지
+
+------------------------------------------------------------------------
+
+사용범위에 따른 컴포넌트 분류
+      - 전역 컴포넌트 
+            - 전역에서 사용 가능
+            - 주로 main.js에서 등록
+            - 문법 :
+                  Vue.Component(tagName, options)
+                  - 예)
+                        Vue.Component("ListPage", ListPageComponent)
+
+      - 지역 컴포넌트
+            - 선언한 영역(부모)에서만 사용 가능
+            - 부모 컴포넌트에 등록
+            - 문법 :
+                  // 부모 컴포넌트
+                 export default {
+                       components: {
+                             "tag-name":컴포넌트,
+                             "tagName": 컴포넌트
+                             컴포넌트   // => :"컴포넌트":컴포넌트
+                       }
+                 }
+
+                 // 사용
+                        <tag-name> </tag-name>
+                        <TagName></TagName>
+
+
+            - 예)
+                  export default {
+                        components: {
+                              ListHeader,
+                              ListFooter
+                        }
+                  }
+
+};
+
+
+
+------------------------------------------------------------------------
+
+컴포넌트 구조
+      <template>
+            UI 영역
+      </template>
+      <script>
+            컴포넌트 정의 영역
+      </script>
+      <style scope> 
+            스타일 영역
+      </style>
+
+
+컴포넌트 파일
+      - 대문자로 시작하세요.
+
+
+
+------------------------------------------------------------------------
+
+
+컴포넌트 정의 영역 상세 구조 
+<script>
+      export module = {
+            name:"이름",
+            data():{
+                  return {
+                        /*
+                        - 컴포넌트에서 사용하는 데이터(속성) 값.                  
+                        - data는 메서드 여야 하며 
+                           리턴 값이 있어야 합니다.
+
+                        - 주의
+                              new Vue()에서 data는 함수가 아닙니다.
+                        */
+                  }
+            },
+
+            methods:{
+                  /*
+                  컴포넌트 내부에서 사용하는 메서드와 이벤트 리스너
+                  */
+            }
+
+            props:{
+                  /*
+                  1. 부모 컴포넌트 에서 자식 컴포넌트로 데이터를 넘길 때 사용.
+                  2. 예)
+                        <MyChild :prop1="data1" v-bind:prop2="data2 prop3="data3" ></MyChild>
+                  3. 정의 방법1
+                        props:["prop1", "prop2", "prop3", ....]
+                        - 단순한 형태 
+
+                  4. 정의 방법2
+                        props:{
+                              prop1:Number,
+                              prop2:[Number, String],
+                              prop3:{
+                                    type:Number,
+                                    required:true|false,
+                                    default:100,
+                                    default(){
+                                          return 100
+                                    },
+                                    validator(value){
+                                          return 조건식
+                                    }
+
+                              }
+                        }
+                        - type: 속성 타입을 설정할 수 있어요.
+                        - required: 필수 유무를 지정할 수 있어요.
+                        - default: 기본값을 설정할 수 있어요.
+                        - validator: 유효성 처리를 할 수 있어요.
+
+                  */
+            }
+
+            computed:{
+                  /*
+                        - 계산식(미리 계산된 값) 정의
+                  */
+            }
+
+
+      }
+
+</script>
+
+
+
