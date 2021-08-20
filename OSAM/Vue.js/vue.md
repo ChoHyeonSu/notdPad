@@ -21,7 +21,6 @@
 
 
 # Vue.js
-*LITTLE BIT OF LOVE
 
 ## 데이터
 - 데이터를 표시할 땐 {{데이터}} 해준다
@@ -33,7 +32,7 @@
 - v-on : v-on속성의 값을 이벤트 메소드와 연결
 - v-if & v-else : 조건을 주어 html로 표현
 - v-for : 배열로 이루어진 프로퍼티 반복적으로 표현
-- *https://cjw-awdsd.tistory.com/33
+
 
 ## 템플릿 문법
 - import 할 때는 부모의 components에 적어준다.
