@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../libs/vue.js"></script>
+    <script>
+        /*
+             플러그인 이란?
+                - 컴포넌트, 필터, 디렉티브, 기타 데이터, 함수 등을
+                  포장하는 기능
+
+                - 선언
+                    플러그인명.install =function(Vue, options){
+                        Vue.component()
+                        Vue.filter()
+                        Vue.directive
+
+                        // 인스턴스 메서드 추가
+                        Vue.prototype.$method=function(options)
+                    }
+
+                - 사용
+                    Vue.use(플러그인명)
+                    use()메서드를 호출하면 install() 메서드가 호출되는 방식
+
+
+
+
+
+             */
+    </script>
+
+
+</head>
+<body>
+<div id="app">
+    <div>
+        <button @click="onClick"> 메서드 호출</button>
+        <my-component></my-component>
+    </div>
+</div>
+
+<script>
+
+    ??
+
+    ??
+
+    var app1 = new Vue({
+        el: "#app",
+        data: {
+            message: ""
+        },
+        methods:{
+            onClick(){
+                app1.$newMethod("message");
+            }
+        }
+    })
+
+</script>
+</body>
+</html>
