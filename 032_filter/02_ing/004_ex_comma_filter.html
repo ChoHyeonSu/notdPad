@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../libs/vue.js"></script>
+    <script>
+        /*
+             전역 필터 생성하기
+                - 선언
+                    Vue.filter("필터명", (value, [...params])=>{
+                        return 값;
+                    })
+                - 사용
+                    {{message|필터이름}}
+
+
+
+
+
+             */
+    </script>
+
+
+</head>
+<body>
+<div id="app">
+    <div>
+        <my-component></my-component>
+    </div>
+</div>
+
+<script>
+    Vue.filter("comma", (numValue, pre)=>{
+
+        let value = numValue.toString();
+        // 여기에 소스를 입력해주세요.
+
+        // 문자열 길이가 3과 같거나 작은 경우 입력 값을 그대로 리턴
+        if (value.length <= 3) {
+            return value;
+        }
+
+        // 결과 값을 저정할 변수
+        var result = "";
+        var strCut = "";
+        while(true){
+            // 마지막 문자-3 위치에서 3문자 자르기
+            var length = value.length;
+            if(length>3) {
+                strCut = value.substr(length - 3, 3);
+
+                // value값 업데이트
+                value = value.substr(0, length - 3);
+
+                result = ","+strCut+result;
+            }else{
+                result= value+result;
+                break;
+            }
+        }
+
+
+        // 최종값 리턴
+        return pre+result;
+
+    })
+
+    Vue.component("MyComponent", {
+        template: `<div>
+                필터 테스트 입니다.
+
+                <div>
+                    {{value|comma("w")}}
+                </div>
+        </div>
+        `,
+        data(){
+            return {
+                value:12345678
+            }
+        }
+    })
+
+    var app1 = new Vue({
+        el: "#app",
+        data: {
+            message: ""
+        }
+    })
+
+</script>
+</body>
+</html>

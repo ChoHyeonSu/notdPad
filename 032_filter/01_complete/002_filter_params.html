@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../libs/vue.js"></script>
+    <script>
+        /*
+             지역 필터 생성하기
+                - 선언
+                    export default {
+                        components:{
+                            // 지역 컴포넌트
+                        },
+                        filters:{
+                            //  지역 필터
+                            filterName(value, param1,...){
+                                return 값;
+                            }
+                        }
+                    }
+                - 사용
+                    {{message|필터이름(파라메터)}}
+
+
+             */
+    </script>
+
+
+</head>
+<body>
+<div id="app">
+    <div>
+        <my-component></my-component>
+    </div>
+</div>
+
+<script>
+
+    Vue.component("MyComponent", {
+        template: `<div>
+                필터 테스트 입니다.
+
+                <div>
+                    {{message|myFilter(2)}}
+                </div>
+        </div>
+        `,
+        data(){
+            return {
+                message:"test1"
+            }
+        },
+        filters:{
+            myFilter(value, param){
+                return "__"+value+"___ "+param;
+            }
+        }
+    })
+
+    var app1 = new Vue({
+        el: "#app",
+        data: {
+            message: ""
+        }
+    })
+
+</script>
+</body>
+</html>

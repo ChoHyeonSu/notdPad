@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../libs/vue.js"></script>
+    <script>
+        /*
+             전역 필터 생성하기
+                - 선언
+                    Vue.filter("필터명", (value, [...params])=>{
+                        return 값;
+                    })
+                - 사용
+                    {{message|필터이름}}
+
+
+
+
+
+             */
+    </script>
+
+
+</head>
+<body>
+<div id="app">
+    <div>
+        <my-component></my-component>
+    </div>
+</div>
+
+<script>
+    Vue.filter("myFilter",(value, param)=>{
+        return "__"+value+"__ param = "+param;
+    })
+
+    Vue.component("MyComponent", {
+        template: `<div>
+                필터 테스트 입니다.
+
+                <div>
+                    {{message|myFilter(2)}}
+                </div>
+        </div>
+        `,
+        data(){
+            return {
+                message:"test1"
+            }
+        }
+    })
+
+    var app1 = new Vue({
+        el: "#app",
+        data: {
+            message: ""
+        }
+    })
+
+</script>
+</body>
+</html>
