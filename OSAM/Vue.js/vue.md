@@ -104,8 +104,49 @@ yarn serve
 
 
 
+# Vue/Cli
+
+# Component
+
+## 사용범위에 따른 컴포넌트 분류
+
+      - 전역 컴포넌트 
+            - 전역에서 사용 가능
+            - 주로 main.js에서 등록
+            - 문법 :
+                  Vue.Component(tagName, options)
+                  - 예)
+                        Vue.Component("ListPage", ListPageComponent)
+
+      - 지역 컴포넌트
+            - 선언한 영역(부모)에서만 사용 가능
+            - 부모 컴포넌트에 등록
+            - 문법 :
+                  // 부모 컴포넌트
+                 export default {
+                       components: {
+                             "tag-name":컴포넌트,
+                             "tagName": 컴포넌트
+                             컴포넌트   // => :"컴포넌트":컴포넌트
+                       }
+                 }
+                 // 사용
+                        <tag-name> </tag-name>
+                        <TagName></TagName>
 
 
+## 컴포넌트 구조
+- 컴포넌트 파일 대문자로 시작하기
+
+      <template>
+            UI 영역
+      </template>
+      <script>
+            컴포넌트 정의 영역
+      </script>
+      <style scope> 
+            스타일 영역
+      </style>
 
 
 
