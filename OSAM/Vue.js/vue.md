@@ -355,9 +355,16 @@ https://question0.tistory.com/26<br>
 - path로 이동  
 - name으로 이동
 - 그 밖에 this.$router.go(num) / window.history.back() 등이 있다.
+- sub들도 넣을 수 있다 (child)
 
 - redict를 통해 초기 값 설정 가능
 
+# Start template
+- 라이브러리들을 조합한 코드들의 샘플
+- common: components / directives / filters / mixins / plugins 등등 과 같은 전역으로 사용하는 것들의 모음
+- data: 전역에서 사용하는 데이터
+- layout: 그룹별로 레이아웃 설정하고 재사용
+- router: 상단에는 레이아웃 자식에는 이 레이아웃으로 연결될 컴포넌트 연결
 
 
 
