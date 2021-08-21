@@ -1,7 +1,10 @@
-
+{
 npm install -g yard
 yarn install
 yarn serve
+https://velog.io/@unani92/Vue-JS-%EB%94%94%EB%A0%89%ED%8B%B0%EB%B8%8C-%EC%86%8D%EC%84%B1%EB%93%A4%EC%9D%84-%ED%99%9C%EC%9A%A9%ED%95%9C-Todo-app-%EA%B5%AC%ED%98%84%ED%95%98
+https://question0.tistory.com/26
+}
 
 ## 구름 ide 사지방에서 local host 접속
 - package.json 에 추가
@@ -148,6 +151,12 @@ yarn serve
             스타일 영역
       </style>
 
+## LifeCycle
+- beforeCreate -> created
+- beforeMount -> [Child] (beforeMount -> mounted) -> mounted
+- beforeUpdate -> updated *부모와 자식 간의 데이터는 개별적으로 처리되지만, props부분의 내용은 beforeUpdate -> [Child] (beforeUpdate -> updated) -> updated 순이다.
+- beforeDestroy -> [Child] (beforeDestroy -> destroyed) -> destroyed
+  
 ## data 영역  
 - ListPage 컴포넌트에서 data 영역의 list 속성 출력하기
       - 구조 :
@@ -191,6 +200,15 @@ yarn serve
 - computed 속성 안의 데이터값이 변경될 때만 computed 안의 메서드가 실행된다.
 - methods 안의 메서드들은 항상 실행된다.
 
+## emit
+- emit은 다른 컴포넌트에게 이벤트를 전달하기 위해 사용할 수 있다. 
+- 부모 컴포넌트는 자식 컴포넌트에서 만들어진 사용자지정 이벤트를 받아(v-on) 특정 동작을 수행할 수 있다.
+
+## ref
+- ref 속성은 자식 엘리먼트에 접근하는 기능
+- 자식 태그에 ref 속성을 부여한다
+- 자식 태그를 호출하기 위해서는 this.$refs 라는 키워드를 사용한다
+*focus와 같은 input으로 바로 가는 함수를 자주 사용한다
 
 # Style
 
@@ -256,10 +274,60 @@ yarn serve
 - v-model.number : 문자를 숫자로 형변환
 - v-model.trim : 공백을 제거해서 받음
 
+## Filter
+- 컴포넌트와 비슷한 형태
+- 필터는 이것저것 커스텀필터를 실무에서 많이 사용한다
+- 지역 필터 생성하기 ( 그 컴포넌트에서만 사용 가능 )
+                - 선언
+                    export default {
+                        components:{
+                            // 지역 컴포넌트
+                        },
+                        filters:{
+                            //  지역 필터
+                            filterName(value, param1,...){
+                                return 값;
+                            }
+                        }
+                    }
+                - 사용
+                    {{message|filterName(param1,...)}}    ---> 여기서는 message가 value값으로 들어감
+                    
+- 전역 필터 생성하기
+                - 선언
+                    Vue.filter("필터명", (value, [...params])=>{
+                        return 값;
+                    })
+                - 사용
+                    {{message|필터명}}
+                    
+                   
 
+## Plugin
+- 컴포넌트, 필터, 디렉티브, 기타 데이터, 함수 등을 포장하는 기능
+- $표시를 보면 플러그인을 사용했구나 하고 해당부분을 찾아주자
 
+                - 선언
+                    플러그인명.install =function(Vue, options){
+                        Vue.component()
+                        Vue.filter()
+                        Vue.directive
 
+                        // 인스턴스 메서드 추가
+                        Vue.prototype.$method=function(options)
+                    }
 
+                - 사용
+                    Vue.use(플러그인명)
+                    use()메서드를 호출하면 install() 메서드가 호출되는 방식
+                    
+                  
+## UI프레임
+- bootstrap-vue 대표적인 프레임이다
+- 커스텀 UI도 추가할 수 있다
+- 보통 Install 과 Import와 플러그인 활성화( Vue.use(플러그인) )의 과정을 거치고 사용된다
+
+# Vue Router
 
 
 
