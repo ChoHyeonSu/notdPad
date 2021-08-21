@@ -10,7 +10,8 @@
     
 
 ## 구름 ide 사지방에서 local host 접속
-- package.json 에 추가
+ 
+    - package.json 에 추가
 
     {
     "name": "001_component_basic",
