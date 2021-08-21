@@ -1,7 +1,7 @@
 
 
 1. HTML+CSS을 배운적이 있다.
-2. 기본 적인 HTML 마크업 태그를 이해하고 사용할 수 있다.(<p>,<div>,<span>,<ul>,<li> block tag, inline tag 등등)
+2. 기본 적인 HTML 마크업 태그를 이해하고 사용할 수 있다.(p,div,span,ul,li,block tag, inline tag 등등)
 3. CSS 기본 선택자를 이해하고 사용할 수 있다.( #id, .className, .parent > .child 등등)
 4. CSS를 활용해 글자 색, 이미지 크기, 특정 영역의 위치 및 크기 등을 제어 할 수 있다.
 5. HTML+CSS를 활용해 일반 회사 사이트의 메인 페이지 정도는 웹퍼블리싱이 가능하다.
