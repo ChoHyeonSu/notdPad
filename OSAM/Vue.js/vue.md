@@ -1,37 +1,37 @@
 ## 명령어 & 링크 모음
 
-    [{<br>
-npm install -g yard<br>
-yarn install<br>
-yarn serve<br>
+ 
+    npm install -g yard<br>
+       yarn install<br>
+    yarn serve<br>
 
-https://velog.io/@unani92/Vue-JS-%EB%94%94%EB%A0%89%ED%8B%B0%EB%B8%8C-%EC%86%8D%EC%84%B1%EB%93%A4%EC%9D%84-%ED%99%9C%EC%9A%A9%ED%95%9C-Todo-app-%EA%B5%AC%ED%98%84%ED%95%98<br>
-https://question0.tistory.com/26<br>
-    }]
+    https://velog.io/@unani92/Vue-JS-%EB%94%94%EB%A0%89%ED%8B%B0%EB%B8%8C-%EC%86%8D%EC%84%B1%EB%93%A4%EC%9D%84-%ED%99%9C%EC%9A%A9%ED%95%9C-Todo-app-%EA%B5%AC%ED%98%84%ED%95%98<br>
+    https://question0.tistory.com/26<br>
+    
 
 ## 구름 ide 사지방에서 local host 접속
 - package.json 에 추가
 
-{
-  "name": "001_component_basic",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --host 0.0.0.0 --disableHostCheck true --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
-  },
-  "dependencies": {
-    "core-js": "^2.6.5",
-    "vue": "^2.6.10"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.11.0",
-    "@vue/cli-service": "^3.11.0",
-    "vue-template-compiler": "^2.6.10"
-  }
-}
+    {
+    "name": "001_component_basic",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "serve": "vue-cli-service serve",
+     "build": "vue-cli-service build",
+     "dev": "cross-env NODE_ENV=development webpack-dev-server --host 0.0.0.0 --disableHostCheck true --open --hot",
+     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    },
+      "dependencies": {
+     "core-js": "^2.6.5",
+      "vue": "^2.6.10"
+     },
+     "devDependencies": {
+      "@vue/cli-plugin-babel": "^3.11.0",
+      "@vue/cli-service": "^3.11.0",
+      "vue-template-compiler": "^2.6.10"
+     }
+    }
 
 - 포트 재설정
 
