@@ -114,9 +114,9 @@ yarn serve
             - 전역에서 사용 가능
             - 주로 main.js에서 등록
             - 문법 :
-                  Vue.Component(tagName, options)
+                  Vue.component(tagName, options)
                   - 예)
-                        Vue.Component("ListPage", ListPageComponent)
+                        Vue.component("ListPage", ListPageComponent)
 
       - 지역 컴포넌트
             - 선언한 영역(부모)에서만 사용 가능
@@ -148,12 +148,48 @@ yarn serve
             스타일 영역
       </style>
 
+## data 영역  
+- ListPage 컴포넌트에서 data 영역의 list 속성 출력하기
+      - 구조 :
+            반드시 아래와 같은 구조여야 함.
+
+            export default {
+                  data(){
+                        return {
+
+                        }
+                  }
+            }
+            
+           
+## props
+     
+      - props 문법
+            Vue.component("tagName", {
+
+                        props:[
+                              프로퍼티명,
+                        ]
+                        또는
+                        props:{프로퍼티명:{
+                             type:Number|String|Boolean|Function|Object|Array|Symbol,
+                             default:value|function(){return},
+                             required:true|false
+
+                        }
+                        }
+                   }
+
+      - props 설명
+            사용:
+                  - 부모에서 =>자식 컴포넌트로 데이터를 전달 할 때 (단방향)
+                  - 부모데이터가 변경되면 자식에게도 전달 되요.(단방향  O)
+                  - 단, 자식 데이터 => 부모 데이터로 가진 않아요.(양방향 X)
 
 
-
-
-
-
+## computed
+- computed 속성 안의 데이터값이 변경될 때만 computed 안의 메서드가 실행된다.
+- methods 안의 메서드들은 항상 실행된다.
 
 
 
