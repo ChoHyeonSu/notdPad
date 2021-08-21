@@ -328,11 +328,35 @@ https://question0.tistory.com/26<br>
 - 보통 Install 과 Import와 플러그인 활성화( Vue.use(플러그인) )의 과정을 거치고 사용된다
 
 # Vue Router
+- Vue.use(Router)
 
+## 인스턴스 생성
 
+         mode:"history"
+         routes: [
+         {
+          path:"",
+          name:"",
+          component: ,
+         } 
+         ]
 
+## router-link 태그의 속성
+- to="/경로"
+- tag="사용할 태그이름"
+- active-class="active" : 선택된 목록 활성화 ( exact tag를 통해 정확성 높일 수 있음 )
 
+## 데이터 전송
+- query: to="/경로?변수=데이터&변수=데이터"  => 다른페이지에서 사용 : $route.query.변수
+- params: to="/경로/데이터/데이터" => 다른페이지에서 사용 : $route.params.변수
 
+## Push
+- this.$router.pusg({})
+- path로 이동  
+- name으로 이동
+- 그 밖에 this.$router.go(num) / window.history.back() 등이 있다.
+
+- redict를 통해 초기 값 설정 가능
 
 
 
