@@ -34,7 +34,7 @@
 - Math.ceil() : 올림
 - Math.floor() : 내림
 - Math.round() : 반올림
-- Math.random() : 0~1 사이의 난수 생성 *Math.floor(Math.random() * 100) + 1 : 1~100 사이의 임의의 숫자 생성
+- Math.random() : 0 ~ 1 사이의 난수 생성 *Math.floor(Math.random() * 100) + 1 : 1~100 사이의 임의의 숫자 생성
 - Math.max() / min() : 최대값, 최소값
 - Math.abs() : 절대값
 - Math.pow() : 제곱
