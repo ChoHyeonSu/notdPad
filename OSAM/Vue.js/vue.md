@@ -53,7 +53,7 @@ yarn serve
 - v-text : 단락의 태그에서 v-text속성의 값으로 "텍스트"를 넣어주면 텍스트 출력
 - v-html : v-text의 기능에서 텍스트로 그대로 출력이 아니라 html로 표현 (태그나 속성 적용)
 - v-bind : 태그의 속성을 vue에서 지정 (v-bind: 를 생략하고 바로 :로 가능)
-- v-on : v-on속성의 값을 이벤트 메소드와 연결
+- v-on : v-on속성의 값을 이벤트 메소드와 연결 (v-on:이벤트명="리스너명")
 - v-if & v-else : 조건을 주어 html로 표현
 - v-for : 배열로 이루어진 프로퍼티 반복적으로 표현 (key와 같이 사용)
 - v-model : 데이터 연결
@@ -192,6 +192,69 @@ yarn serve
 - methods 안의 메서드들은 항상 실행된다.
 
 
+# Style
+
+## Class
+- 클래스를 동적으로 넣어주고 싶을 때 => <태그 :class="{키값(클래스이름):데이터값}></태그>
+- 인라인 오브젝트 클래스 
+- 인라인 배열 클래스 : 클래스를 배열로 묶어서 처리
+- 오브젝트 클래스 : 클래스를 오브젝트로 묶어서 처리
+
+## Style
+- 인라인 스타일
+- 오브젝트 스타일 : 여러 스타일을 묶어서 처리
+
+# Event
+
+## 이벤트 리스너 설정하기
+- v-on 디렉티브
+- @이벤트명 = "리스너명"
+
+## 이벤트 리스터에 이벤트 객체 넘기기
+- listener($event) 
+
+## 인라인 이벤트
+- 간단한 처리는 인라인으로 그냥 리스너를 바로 바꿔도 됨
+
+## 버블링
+- 하나의 이벤트가 발생했을때 부모 요소로 퍼져나가는 현상
+
+## 기본 이벤트 수식어 
+- @이벤트.stop = stopPropagation()과 동일 : 버블링 현상 방지
+- @이벤트.prevent = preventDefault() : 태그의 기능 억제
+- @이벤트.capture = event.capture 
+- @이벤트.self = event.target이 자기 자신인 경우에만 실행 (자식노드 제외)
+- @이벤트.once = 한번만 이벤트 실행
+- @이벤트.키수식어.마우스수식어.기본수식어 이런식으로 합쳐서도 가능
+- $event로 event정보를 메서드에서 매개변수로 사용가능
+
+## 키 수식어 (@keydown)
+- 버튼이 입력됐을 때 실행
+- .enter, tab 등등 키보드 입력값
+- Vue.config.keyCodes.수식어이름=키코드값 도 가능
+
+## 마우스 수식어 (@click)
+- 마우스 버튼이 눌렸을 때 실행
+- .left, right, middle 마우스 입력값
+
+# Form Input
+
+## input / textarea / checkbox
+- 기존의 v-modle로 속성의 값을 양방향으로 받아서 바인딩 해주기
+
+## checkbox_value
+- 체크박스에 true/false 말고 문자열 같은 value를 받고 싶을 때 : true-value="" false-value="" 를 사용해서 받아줌
+- true/false로만 구분된게 아니라 여러가지 항목의 value를 받고 싶을 때 : value="" 를 사용해서 받아줌
+
+## radio
+- 체크박슨데 하나만 체크 가능함
+
+## select
+- option중 하나 선택 
+
+## input 수식어
+- v-model.number : 문자를 숫자로 형변환
+- v-model.trim : 공백을 제거해서 받음
 
 
 
