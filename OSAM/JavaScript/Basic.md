@@ -37,12 +37,12 @@
 
 - Object
 
-   const example = {
-      key : value,    <-- key = property
-      fly : function(){    <-- function 키워드 생략 가능, 객체 안의 function을 method라고 함
-        console.log("example")      
+    const example = {
+        key : value,    <-- key = property
+        fly : function(){    <-- function 키워드 생략 가능, 객체 안의 function을 method라고 함
+          console.log("example")      
+        }
       }
-    }
  
  - 접근
  
