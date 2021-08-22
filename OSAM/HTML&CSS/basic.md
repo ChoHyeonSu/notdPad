@@ -80,6 +80,10 @@
 ## span태그
 - div태그와 유사한 기능이지만, div는 줄바꿈이 가능하지만 span은 불가능하다.
 
+## meta태그
+- 웹 페이지의 보이지 않는 정보를 제공
+- description, keywords, author, subject, classification 등의 정보를 표기
+
 ## 목록
   
   - ul 태그 : 순서가 상관없을 때(기호)
