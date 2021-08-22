@@ -71,13 +71,13 @@
 - 항상 마지막에 위치 해야 한다.
 
 ## Spread syntax 전개 구문
-- 배열 또는 객체를 병합할 때 편리함 !!
-/*  
-  let arr1 = [1,2,3];
-  let arr2 = [4,5,6];
-  let result = [...arr1, ...arr2];
-  *result : [1,2,3,4,5,6];
-*/
+    - 배열 또는 객체를 병합할 때 편리함 !!
+  
+      let arr1 = [1,2,3];
+      let arr2 = [4,5,6];
+      let result = [...arr1, ...arr2];
+      result : [1,2,3,4,5,6];
+
 
 
 ## Closure
