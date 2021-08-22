@@ -51,7 +51,7 @@
     
  - 추가
  
-  example.more = "extra"
+  example.more = "extra"<br>
   example['more'] = "extra"
     
  - 삭제
